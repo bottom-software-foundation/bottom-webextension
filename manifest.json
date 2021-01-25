@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Bottomify",
+  "description": "Replaces words with emojis.",
+  "homepage_url": "https://github.com/bottom-software-foundation/bottom-webextension",
+  "icons": {
+    "36": "./bottom-web/site/pleading.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bottomify@bottom-software-foundation.github.io"
+    }
+  },
+  "background": {
+    "scripts": ["./scripts/menu_bg.js"]
+  },
+  "version": "1.0",
+  "web_accessible_resources": [
+    "./bottom-web/site/bottom_wasm_bg.wasm",
+    "./styles/twemoji.ttf"
+  ],
+  "browser_action": {
+    "default_title": "Bottomify",
+    "default_popup": "./pages/enable.html"
+  },
+  "permissions": ["storage", "contextMenus"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "./bottom-web/site/bottom_wasm.js",
+        "./scripts/substitute.js",
+        "./scripts/menu_script.js"
+      ]
+    }
+  ]
+}

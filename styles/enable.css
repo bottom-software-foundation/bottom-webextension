@@ -1,0 +1,28 @@
+body[data-popup="bottomify"] {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 200px;
+}
+
+body[data-popup="bottomify"] div.translator-buttons {
+  text-align: center;
+}
+
+body[data-popup="bottomify"] .emoji {
+  font-family: emoji, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body[data-popup="bottomify"] input[type="text"] {
+  border: none;
+  border-bottom: black 1px solid;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 2em;
+  width: 100%;
+}
+
+body[data-popup="bottomify"] button.emoji {
+  font-size: 2em;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}

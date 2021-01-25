@@ -1,0 +1,3 @@
+[submodule "bottom-web"]
+	path = bottom-web
+	url = https://github.com/bottom-software-foundation/bottom-web.git
